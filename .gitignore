@@ -1,0 +1,27 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Credenciais / autenticação
+.env
+.token_cache.json
+config/fontes.json
+
+# Dados extraídos e conteúdo corporativo
+output/*
+!output/.gitkeep
+!output/processamento/
+output/processamento/*
+!output/processamento/.gitkeep
+
+# Word / artefatos
+*.docx
+*.tmp
+
+# IDE / SO
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
