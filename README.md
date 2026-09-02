@@ -1,6 +1,18 @@
 # OneNoteKB — Pipeline de Base de Conhecimento com Python + IA Local
 
-Projeto para extrair conteúdo de blocos do Microsoft OneNote, transformar páginas em uma base JSON estruturada, aplicar regras determinísticas em Python, usar um LLM local via Ollama para interpretação controlada e gerar artigos padronizados em Word.
+Pipeline para extração, normalização, classificação e geração de artigos de uma base de conhecimento utilizando **Python, Microsoft Graph API e Inteligência Artificial local com Ollama**.
+
+O projeto surgiu a partir de um problema real: transformar diferentes bases de conhecimento armazenadas no OneNote, com estruturas e padrões distintos, em artigos organizados e padronizados.
+
+A solução utiliza uma abordagem híbrida:
+
+- **Python** para processamento determinístico, regras, validações e estruturação dos dados;
+- **Ollama + LLM local** para tarefas que exigem interpretação de conteúdo;
+- **Microsoft Graph API** para integração com o OneNote;
+- **Microsoft Entra ID + MSAL** para autenticação;
+- **python-docx** para geração dos documentos finais.
+
+> Este projeto foi desenvolvido com auxílio de Inteligência Artificial Generativa. O código está passando por um processo contínuo de revisão, estudo e refatoração para garantir compreensão integral da implementação e evolução da qualidade técnica da solução.
 
 ## Resultado alcançado na primeira base
 
@@ -197,3 +209,73 @@ Essa abordagem reduz alucinações e impede que o modelo reorganize livremente i
 ## Observação
 
 Este repositório contém a estrutura e o código do projeto, mas não inclui conteúdo interno, documentos corporativos, credenciais ou dados reais extraídos do OneNote.
+
+
+## 🤖 Uso de Inteligência Artificial no desenvolvimento
+
+Este projeto foi desenvolvido com o auxílio de ferramentas de Inteligência Artificial Generativa durante diferentes etapas do processo.
+
+A IA foi utilizada como ferramenta de apoio principalmente para:
+
+- auxiliar na definição da arquitetura inicial do projeto;
+- apoiar a implementação e refatoração de código Python;
+- analisar erros e resultados durante os testes;
+- sugerir melhorias nas regras de processamento;
+- auxiliar na criação das validações estruturais;
+- apoiar a documentação do projeto;
+- estruturar a integração entre Python e o modelo executado localmente através do Ollama.
+
+Além disso, o próprio projeto utiliza um LLM local através do Ollama como parte do pipeline de processamento dos artigos.
+
+### Revisão e aprendizado do código
+
+Como parte da evolução deste projeto, será realizada uma revisão técnica completa do código desenvolvido.
+
+O objetivo dessa etapa é revisar cada módulo, função e regra implementada para:
+
+- compreender detalhadamente o funcionamento do código;
+- revisar decisões de arquitetura;
+- identificar possíveis simplificações e melhorias;
+- validar tratamento de erros e casos extremos;
+- melhorar organização, legibilidade e manutenibilidade;
+- revisar aspectos de segurança;
+- identificar possíveis problemas de performance;
+- aumentar a cobertura de testes;
+- garantir domínio técnico sobre todas as partes da solução.
+
+A utilização de IA neste projeto não substitui o processo de aprendizado e validação técnica.
+
+O projeto também funciona como um ambiente prático de estudo de Python, APIs, automação, processamento de dados, Microsoft Graph, autenticação, LLMs e engenharia de software.
+
+> **Nota:** o código continuará sendo revisado e refatorado à medida que o projeto evoluir e novas bases de conhecimento forem incorporadas.
+
+## 🚧 Status do projeto
+
+**Em desenvolvimento**
+
+### Concluído
+
+- [x] Autenticação no Microsoft Graph
+- [x] Extração de conteúdo do OneNote
+- [x] Persistência de cache de autenticação
+- [x] Checkpoint de extração
+- [x] Normalização dos dados
+- [x] Classificação de artigos
+- [x] Integração com Ollama
+- [x] Processamento híbrido Python + LLM
+- [x] Processamento em lote
+- [x] Validação estrutural dos artigos
+- [x] Geração automática de documentos Word
+- [x] Primeira base processada
+
+### Em andamento
+
+- [ ] Generalização da arquitetura para múltiplas bases
+- [ ] Processamento dos demais notebooks
+- [ ] Revisão técnica completa do código
+- [ ] Refatoração dos módulos
+- [ ] Criação de testes automatizados
+- [ ] Melhoria do tratamento de exceções
+- [ ] Documentação da arquitetura
+- [ ] Revisão de segurança
+- [ ] Otimização de performance
